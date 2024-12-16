@@ -45,7 +45,7 @@ export class DogController {
 		@Param('id', new ParseIntPipe({
 			exceptionFactory: () => {
 				throw new BadRequestException('这个是自定义的错误')
-			}
+			},
 		})) id: CreatIdDto,
 		@Body() CreateDto: CreateDto,
 	) {
